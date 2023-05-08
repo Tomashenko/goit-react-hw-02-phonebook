@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import css from './Сontact.modul.css';
+import css from './ContactForm.modul.css';
 
 class ContactForm extends Component {
 
@@ -8,15 +8,6 @@ state = {
     name: '',
     number: ''
 }
-
-handleSubmit = e => {
- e.preventDefault();
-
- this.props.onSubmit({
-    name: this.state.name,
-    number: this.state.number
-});
-};
 
 handleChange = e => {
   console.log(e.currentTarget);
@@ -27,11 +18,21 @@ handleChange = e => {
   this.setState({ [name] : value});
 }
 
+handleSubmit = e => {
+  e.preventDefault();
+ 
+  this.props.onSubmit({
+     name: this.state.name,
+     number: this.state.number
+
+ });
+ };
+
 render(){
     return(
       <div className="Form__box">
 
-    <form className="Form" onSubmit={this.handleSubmit}>
+    <form onSubmit={this.handleSubmit}>
 
     <label>Name
     <br />
@@ -44,6 +45,7 @@ render(){
      required
      onChange={this.handleChange}
      value={this.state.name}
+     onBlur={this.validator}
      /></label>
      <br />
     <label>Number
@@ -59,7 +61,7 @@ render(){
      /></label>
      <br />
 
-     <button type='submit' 
+     <button className="Form__btn" type='submit' 
      >Add contact</button> 
 
     </form>
