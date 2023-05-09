@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
-export const Form__box = styled.div`
+export const FormBox = styled.div`
  border-radius: 5px;
     width: 350px;
     background-color: lightskyblue;
     padding: 15px;
     border: 2px solid black;`;
 
-export const Form__btn = styled.button
+export const FormBtn = styled.button
 `   margin-top: 15px;
     background-color: beige;
     border-radius: 5px;

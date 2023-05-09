@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Form__box, Form__btn } from './ContactForm.styled';
+import { FormBox, FormBtn } from './ContactForm.styled';
 
 class ContactForm extends Component {
 
@@ -30,7 +30,7 @@ handleSubmit = e => {
 
 render(){
     return(
-      <Form__box>
+      <FormBox>
 
     <form onSubmit={this.handleSubmit}>
 
@@ -61,11 +61,11 @@ render(){
      /></label>
      <br />
 
-     <Form__btn type='submit' 
-     >Add contact</Form__btn> 
+     <FormBtn type='submit' 
+     >Add contact</FormBtn> 
 
     </form>
-    </Form__box>
+    </FormBox>
      )};
 }
 

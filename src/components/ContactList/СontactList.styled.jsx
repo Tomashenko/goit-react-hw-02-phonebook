@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ContactList__btn = styled.button
+export const ContactListBtn = styled.button
 `    margin-left: 10px;
     background-color: beige;
     border-radius: 5px;
@@ -13,7 +13,7 @@ export const ContactList__btn = styled.button
     }
 }`;
 
-export const ContactList__item = styled.li
+export const ContactListItem = styled.li
 `     margin-bottom: 10px;
 `;
 
